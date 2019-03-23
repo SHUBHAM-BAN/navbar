@@ -1,0 +1,272 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ 	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+ 	 <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial scale=1">
+ 	 <style>
+ 	 .search_box{
+ 	 	position: absolute;
+ 	 	background-color: #2f3640;
+ 	 	height:40px;
+ 	 	border-radius: 40px;
+ 	 	padding: 2px;
+ 	 }
+ 	 #input_box
+ 	 {
+ 	 	border:none;
+ 	 	outline:none;
+ 	 	background: none;
+ 	 	float:left;
+ 	 	padding: 0;
+ 	 	color:#fff;
+ 	 	font-size: 16px;
+ 	 	transition: 0.4s all;
+ 	 	line-height: 40px;
+ 	 	width:0;
+ 	 }
+ 	 .btn
+ 	 {
+ 	 	color:#1abc9c;
+ 	 	float:right;
+ 	 	text-decoration: none;
+ 	 	width:40px;
+ 	 	height:40px;
+ 	 	text-align: center;
+ 	 	border-radius: 50%;
+ 	 }
+ 	.search_box:hover #input_box
+ 	{
+ 		width:240px;
+ 	}
+ 	.search_box:hover .btn
+ 	{
+ 		background-color: #fff; 	}
+ 		input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+ 	 </style>
+ </head>
+ <body>
+ 	<nav class="navbar navbar-dark bg-dark navbar-expand-sm navbar-toggleable-sm sticky-top">
+ 	<a href="#" class="navbar-brand">Geeksman</a>
+ 	<form class="form-inline mr-auto">
+ 		<div class="search_box">
+ 		<input type="text" class="form-control" placeholder="Search" id="input_box">
+ 		<a href="#" class="btn">
+<i class="fas fa-search" style="color: red;"></i>
+ 		</a>  
+ 	</div>
+ </form>
+ 	<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#my_Menu" aria-controls="my_Menu" aria-expanded="false" aria-label="Toggle navigation">
+ 		<span class="navbar-toggler-icon"></span>
+ 	</button>
+ 	<div class="collapse navbar-collapse" id="my_Menu">
+ 	<ul class="navbar-nav ">
+ 		<li class="nav-item" style="margin-left: 700px;"><a href="#" class="nav-link"><b>CONTESTS</b></a>
+ 		</li>
+ 		<li class="nav-item"><a class="nav-link" href="#"><b>ARCHIVES</b></a></li>
+ 		<li class="nav-item"><button type="button" onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="btn btn-outline-success nav-link" style="border-radius: 2px;width:60px;">Log In</button>
+ 			<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="data:image/png;base64,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" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+ 		</li>
+ 		<li class="nav-item"><button type="button" onclick="document.getElementById('id02').style.display='block'" class="btn btn-danger nav-link" style="border-radius: 20%;width:80px;margin-left: 10px;">Sign Up</button>
+ 			<div id="id02" class="modal">
+  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+ 		</li>
+ 	</ul>
+ </div>
+  </nav>
+  <script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+ </body>
+ </html> 
